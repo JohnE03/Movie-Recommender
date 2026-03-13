@@ -1,0 +1,90 @@
+movieTitleCheck(String title)
+Logic: Each word must start with an uppercase letter.
+
+Test Cases:
+
+movieTitleCheck("The Matrix") → true
+
+movieTitleCheck("the Matrix") → false
+
+movieTitleCheck("The matrix") → false
+
+movieTitleCheck("TheMatrix") → true (1 word, starts with uppercase)
+
+------------------------------------------------
+movieIdLettersCheck(String[] line)
+Logic: Movie ID prefix must match initials of title.
+
+Test Cases:
+
+movieIdLettersCheck(["The Matrix", "TM123"]) → true
+
+movieIdLettersCheck(["The Matrix", "TX123"]) → false
+
+movieIdLettersCheck(["Dark Knight", "DK123"]) → true
+
+movieIdLettersCheck(["Dark Knight", "KD123"]) → false
+
+------------------------------------------------
+movieIdNumbersCheck(String id)
+Logic:
+
+Must be exactly 3 digits
+
+Unique
+
+Test Cases:
+
+Input: "TM123" first time → true
+
+Input: "TM123" second time → false (duplicate)
+
+Input: "TM12" → false (only 2 digits)
+
+Input: "TM1234" → false (too many digits)
+
+------------------------------------------------
+userNameCheck(String name)
+Logic:
+
+No leading spaces
+
+Only alphabet and space allowed
+
+Test Cases:
+
+"Hassan Ali" → true
+
+" Hassan Ali" → false (leading space)
+
+"Hassan123" → false
+
+"Hassan@Ali" → false
+
+"Hassan" → true
+
+--------------------------------------
+userIdCheck(String id)
+Logic:
+
+Length = 9
+
+First 8: digits
+
+Last: alphanumeric
+
+Unique
+
+Test Cases:
+
+"12345678X" → true
+
+"12345678X" again → false (duplicate)
+
+"1234567X" → false (only 8 chars)
+
+"12345678@" → false (non-alphanumeric last char)
+
+"ABCDEFGHX" → false (letters in first 8)
+
+----------------------------------------------
